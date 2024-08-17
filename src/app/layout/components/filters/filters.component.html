@@ -1,0 +1,18 @@
+<section class="filters">
+    <div class="filters__title">
+        <h3>Products</h3>
+    </div>
+
+    <ul>
+        <li >
+            <input type="radio" value="''" #filterInput name="filter" (change)="onFilterChange($event.target)">
+            <label for="" (click)="filterInput.click()">All</label>
+        </li>
+        <li *ngFor="let filter of allFilters">
+            <input type="radio" [value]="filter" #filterInput name="filter" (change)="onFilterChange($event.target)">
+            <label for="" (click)="filterInput.click()">{{filter}}</label>
+        </li>
+
+    </ul>
+
+</section>

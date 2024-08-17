@@ -1,0 +1,65 @@
+@import "../../../shared/style/variables.scss";
+
+
+.layout{
+    &__title{
+        &__breadcrumb{
+            padding: 0;
+        }
+        &__breadcrumb li {
+            display: inline;
+            font-size: 18px;
+          }
+
+          &__breadcrumb li+li:before { /* Add a slash symbol (/) before/behind each list item */
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+          }
+    }
+
+    &__products{
+        display: flex;
+    }
+}
+
+app-filters{
+    width: 25%;
+}
+
+app-products{
+    width: 75%;
+}
+
+
+  
+.pagination--section{
+    max-width: 100%;
+    overflow-x: auto;
+    ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      li{
+        button{
+          background-color: #ffffff;
+          cursor: pointer;
+          padding: 5px;
+          border: #80808012;
+        }
+        a{
+        //   background-color: $base-color;
+          cursor: pointer;
+          padding: 7px;
+          border: 1px solid #80808012
+  
+        }
+        .active{
+          background-color: $base-color ;
+          border-radius: $border-raduis;
+        }
+      }
+    }
+  }

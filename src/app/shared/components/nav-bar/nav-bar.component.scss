@@ -1,0 +1,86 @@
+.navbar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #4347522f;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-block-start: 1%;
+        padding-block-end: 1%;
+
+        &__list {
+            color: #667085;
+            display: flex;
+            align-items: center;
+
+            &__logo {
+                margin-inline-end: 70px;
+            }
+        }
+
+        &__search,
+        &__login {
+            color: #667085;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+
+            &__input {
+                position: relative;
+                width: 319px;
+                height: 32px;
+
+                &__label {
+                    position: absolute;
+                    top: 25%;
+                    left: 5%;
+                    display: flex;
+                    opacity: .7;
+
+                    img {
+                        margin-inline-end: 5px;
+                    }
+                }
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid lightgray;
+                    padding: 7px;
+                    border-radius: 6px;
+                    // padding: 0;
+
+                    &:focus {
+                        outline: solid 1px gray !important;
+                    }
+                }
+            }
+
+            &__basket {
+                &__container {
+                    position: relative;
+
+                    &__notification {
+                        position: absolute;
+                        width: 18px;
+                        height: 18px;
+                        background-color: #41CCCC;
+                        border-radius: 50%;
+                        border: 2px solid blue;
+                        text-align: center;
+                        font-size: 14px;
+                        outline: 3px solid white;
+                        bottom: 18px;
+                        left: 12px;
+                    }
+
+                    ;
+                }
+
+
+            }
+
+
+        }
+    }
+}

@@ -1,0 +1,62 @@
+<section class="layout">
+    <div class="layout__title">
+        <h3>IPHONE</h3>
+        <ul class="layout__title__breadcrumb">
+            <li>Home</li>
+            <li>all Products</li>
+            <li>Iphone</li>
+            <!-- <li>{{searchCriteria}}</li> -->
+          </ul>
+        
+
+    </div>
+    <div class="layout__products">
+        <app-filters/>
+        <app-products [productsSource]="this.products" />
+    </div>
+
+
+    <div class="pagination--section" *ngIf="this.pageNumbers">
+        <nav aria-label="...">
+          <ul class="pagination justify-content-center">
+            <li
+              class="page-item"
+
+              >
+              <button
+              [disabled]="this.skip < 10"
+              class="page-link"
+              (click)="getAllProducts(this.currentNumber - 1)"
+              >
+                <
+              </button>
+            </li>
+            <li
+              class="page-item"
+              *ngFor="let page of [].constructor(this.pageNumbers); let i = index "
+                (click)="getAllProducts(i+1)"
+              >
+              <a
+
+                class="page-link"
+                [ngClass]="{ active: i+1 == currentNumber }"
+                >{{ i+1 }}</a
+              >
+            </li>
+    
+            <li class="page-item">
+              <button
+              [disabled]="this.total - this.skip <= 10 "
+              disabled
+              class="page-link"
+              (click)="getAllProducts(this.currentNumber + 1)"
+                >
+                >
+              </button>
+            </li>
+          </ul>
+        </nav>
+    </div>
+    
+    
+</section>

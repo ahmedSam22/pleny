@@ -1,0 +1,37 @@
+<section class="navbar">
+    <div class="navbar__container container">
+        <div class="navbar__container__list">
+            <div class="navbar__container__list__logo">
+                <app-logo [color]="'black'" />
+            </div>
+            <span>Home</span>
+        </div>
+        <div class="separator"></div>
+
+        <div class="navbar__container__login" *ngIf="!loggedIn">
+            <span>Login</span>
+        </div>
+        <div class="navbar__container__search" *ngIf="loggedIn">
+
+            <div class="navbar__container__search__input">
+                <div class="navbar__container__search__input__label" #label (click)="search.focus()">
+                    <img src="assets/images/search.png" alt="" srcset="">
+                    <span>Search</span>
+                </div>
+                <input type="text" name="" [(ngModel)]="searchCriteria" id="" #search (focus)="label.style.visibility = 'hidden'" (blur)="label.style.visibility='visible'" (keyup.enter)="searchProducts()">
+            </div>
+            <div class="navbar__container__search__basket">
+                <div class="navbar__container__search__basket__container">
+                    <img src="assets/images/Cart.png" alt="" srcset="">
+                    <span class="navbar__container__search__basket__container__notification">{{this.productServices.cart}}</span>
+                    
+                </div>
+
+
+            </div>
+
+            <span>Account</span>
+
+        </div>
+    </div>
+</section>

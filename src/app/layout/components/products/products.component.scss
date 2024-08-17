@@ -1,0 +1,10 @@
+div{
+    display: flex;
+    flex-wrap: wrap;
+    // overflow-y: scroll;
+    // max-height: 80%;
+}
+
+app-item{
+    width: 33%;
+}

@@ -1,0 +1,20 @@
+<section>
+    <div>
+        <app-item *ngFor="let product of productsSource" 
+        [imgSrc]="product['images'][0]"
+        [title]="product['brand']" 
+        [desc]="product['description']"
+        [discount]="product['discountPercentage']"
+        [afterDiscount]="product['price']"
+        [beforeDiscount]="countPriceBeforeDiscount(product)"
+        [brand]="product['brand']"
+        [category]="product['category']"
+        [stock]="product['stock']"
+        [rate]="product['rating']"
+        [reviewscount]="product['reviews']"
+
+        />
+        </div>
+        
+</section>
+

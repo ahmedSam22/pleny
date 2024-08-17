@@ -1,0 +1,68 @@
+<section class="item">
+    <div class="item__container">
+
+
+        <div class="item__container__image">
+            <img [src]="imgSrc" alt="" srcset="">
+            <span class="item__container__image__discount">-{{discount}}%</span>
+        </div>
+
+
+        <div class="item__container__details">
+
+            <div class="item__container__details__text">
+                <div class="item__container__details__text__title">
+                    <h4>{{title}}</h4>
+                </div>
+                <div class="item__container__details__text__desc">
+                    <p>{{desc}}</p>
+                </div>
+            </div>
+
+            <div class="item__container__details__price">
+                <span class="item__container__details__price__old-price">
+                    <span class="item__container__details__price__old-price__number">{{beforeDiscount}}</span>
+
+                    USD</span>
+                <span class="item__container__details__price__new-price">
+                    <span class="item__container__details__price__new-price__number">{{afterDiscount}}</span>
+                    USD</span>
+            </div>
+
+            <div class="item__container__details__specs">
+                <div class="item__container__details__specs__type">
+                    <span class="item__container__details__specs__type__key">brand:</span>
+                    <span class="item__container__details__specs__type__value">{{brand}}</span>
+                </div>
+
+                <div class="item__container__details__specs__type">
+                    <span class="item__container__details__specs__type__key">category:</span>
+                    <span class="item__container__details__specs__type__value">{{category}}</span>
+                </div>
+
+                <div class="item__container__details__specs__type">
+                    <span class="item__container__details__specs__type__key">in stock:</span>
+                    <span class="item__container__details__specs__type__value">{{stock}}</span>
+                </div>
+
+            </div>
+
+            <div class="item__container__details__rate">
+                <div class="item__container__details__rate__container">
+                    <span class="item__container__details__rate__container__star">
+                        <img src="../../../../assets/images/Star.png" alt="" srcset="">
+                        <span class="item__container__details__rate__container__star__percentage">
+                            {{rate}}
+                        </span>
+
+                    </span>
+                    <span
+                        class="item__container__details__rate__container__reviews__number">({{reviewscount.length}})</span>
+                </div>
+
+            </div>
+
+            <button (click)="addToCart()">Add To Cart</button>
+        </div>
+    </div>
+</section>
