@@ -30,7 +30,6 @@ export class LoginComponent {
 
   login(){
     return this.auth.login(this.form.value).subscribe((e:any)=>{
-      console.log(e , "done")
       if(e.token){
         this.auth.LoggedIn.next(true);
         localStorage.setItem(`currentUserKey` , e)

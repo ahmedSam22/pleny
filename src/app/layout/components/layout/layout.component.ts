@@ -53,7 +53,6 @@ ngOnInit(){
     this.skip = e.skip
     this.total = e.total
     this.getPageNumbers(e.total)
-    console.log(this.products);
     
     this.currentNumber = page
   })

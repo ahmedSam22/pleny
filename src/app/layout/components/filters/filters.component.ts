@@ -17,7 +17,6 @@ export class FiltersComponent {
 
  ngOnInit(){
   this.getAllProduct()
-console.log(this.allFilters);
 
 }
   getAllProduct(){
